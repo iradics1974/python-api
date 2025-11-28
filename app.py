@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from Python API running in Kubernetes!", 200
+    return "Hello GitOps 2.0!", 200
 
 @app.route("/info")
 def info():
