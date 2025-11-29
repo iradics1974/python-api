@@ -1,6 +1,6 @@
 from flask import Flask
 
-# Create the Flask application object
+# Create the Flask application object.
 app = Flask(__name__)
 
 # Define a route (URL endpoint) for GET requests
