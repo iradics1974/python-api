@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # This is the response returned when someone calls /
-    return "Hello GitOps 2.0!"
+    return "Hello from Python API — UPDATED!"
 
 # Optional health endpoint for Kubernetes readiness/liveness checks
 @app.route("/health")
