@@ -1,24 +1,20 @@
-from flask import Flask, jsonify
-import socket
-import platform
+from flask import Flask
 
+# Create the Flask application object
 app = Flask(__name__)
 
+# Define a route (URL endpoint) for GET requests
 @app.route("/")
 def home():
-    return "Hello GitOps 2.0!", 200
+    # This is the response returned when someone calls /
+    return "Hello GitOps 2.0!"
 
-@app.route("/info")
-def info():
-    return jsonify({
-        "host": socket.gethostname(),
-        "system": platform.system(),
-        "release": platform.release(),
-    })
-
+# Optional health endpoint for Kubernetes readiness/liveness checks
 @app.route("/health")
 def health():
-    return "OK", 200
+    return "OK"
 
+# Start the application if the script is executed directly
+# Host='0.0.0.0' makes it available from inside a container
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
