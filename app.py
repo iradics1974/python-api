@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # This is the response returned when someone calls /
-    return "Hello from Python API — UPDATED!"
+    return "Hello István! GitOps pipeline test successful!"
 
 # Optional health endpoint for Kubernetes readiness/liveness checks
 @app.route("/health")
