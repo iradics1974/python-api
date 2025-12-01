@@ -9,5 +9,5 @@ spec:
   ports:
     - port: 80                   # Service port
       targetPort: 5000           # Flask internal port
-      nodePort: 30080            # External Minikube port
+     # nodePort: 30080            # External Minikube port
 
